@@ -3,24 +3,24 @@
 
 
 int main(int argc, char *argv[]) {
-	//Em C, uma estrutura (struct) È uma coleÁ„o de vari·veis referenciadas por um nome, fornecendo uma maneira conveniente de se ter
-	//informaÁıes relacionadas agrupadas.
+	//Em C, uma estrutura (struct) √© uma cole√ß√£o de vari√°veis referenciadas por um nome, fornecendo uma maneira conveniente de se ter
+	//informa√ß√µes relacionadas agrupadas.
 	
-	//no È o identificador (tag) da struct
-	//struct È um tipo de dado. Ou seja, nesse ponto do cÛdigo nenhuma vari·vel foi declarada. Apenas a forma do dos dados foi definida.
+	//no √© o identificador (tag) da struct
+	//struct √© um tipo de dado. Ou seja, nesse ponto do c√≥digo nenhuma vari√°vel foi declarada. Apenas a forma do dos dados foi definida.
 	struct no{
-		int dado; //Este membro armazena o dado que o nÛ contÈm. Neste caso, È um n˙mero inteiro (int).
-		struct no *prox; //Este membro È um ponteiro para outro nÛ da lista. Ele aponta para o prÛximo nÛ na sequÍncia.
+		int dado; //Este membro armazena o dado que o n√≥ cont√©m. Neste caso, √© um n√∫mero inteiro (int).
+		struct no *prox; //Este membro √© um ponteiro para outro n√≥ da lista. Ele aponta para o pr√≥ximo n√≥ na sequ√™ncia.
 	};
-	//Declarando trÍs ponteiros para a struct no
+	//Declarando tr√™s ponteiros para a struct no
 	struct no *lista, *p, *q;
-	//Declarando trÍs vari·veis inteiras que ser„o usadas para diferentes propÛsitos dentro do programa.
+	//Declarando tr√™s vari√°veis inteiras que ser√£o usadas para diferentes prop√≥sitos dentro do programa.
 	int sn, cont, pos;
-	//Define o ponteiro lista como NULL. Isso geralmente È feito para indicar que a lista encadeada est· vazia.
+	//Define o ponteiro lista como NULL. Isso geralmente √© feito para indicar que a lista encadeada est√° vazia.
 	lista = NULL;
 	cont = 0;
 	
-	//FunÁ„o que contÈm o menu de capturar a escolha do usu·rio
+	//Fun√ß√£o que cont√©m o menu de capturar a escolha do usu√°rio
 	int menu() {
 		int escolha;
 	    printf("\nBem-vindo(a) ao Sistema de Lista Lineares!\n\n");
@@ -30,7 +30,7 @@ int main(int argc, char *argv[]) {
 	    printf("3. Fazer uma insercao intermediaria;\n");
 	    printf("4. Encerrar programa;\n");
 	    printf("Escolha uma opcao: ");
-	    scanf("%d", &escolha); // Captura a escolha do usu·rio
+	    scanf("%d", &escolha); // Captura a escolha do usu√°rio
 	    return escolha;
 	}
 	
@@ -38,7 +38,7 @@ int main(int argc, char *argv[]) {
 		system("cls");
 	}
 	
-	//FunÁ„o para inserÁ„o ‡ esquerda
+	//Fun√ß√£o para inser√ß√£o √† esquerda
 	void inserirEsquerda(int valor){
 		struct no *novoNo = (struct no *)malloc(sizeof(struct no));
         novoNo->dado = valor;
@@ -57,17 +57,17 @@ int main(int argc, char *argv[]) {
 	    
 	}
 	
-	// FunÁ„o para inserÁ„o ‡ direita
+	// Fun√ß√£o para inser√ß√£o √† direita
 	void inserirDireita(int valor) {
 	    struct no *novoNo = (struct no *)malloc(sizeof(struct no));
 	    novoNo->dado = valor;
 	    novoNo->prox = NULL;
 	
 	    if (lista == NULL) {
-	        // Se a lista estiver vazia, o novo nÛ se torna o primeiro nÛ da lista
+	        // Se a lista estiver vazia, o novo n√≥ se torna o primeiro n√≥ da lista
 	        lista = novoNo;
 	    } else {
-	        // Caso contr·rio, encontramos o ˙ltimo nÛ e o conectamos ao novo nÛ
+	        // Caso contr√°rio, encontramos o √∫ltimo n√≥ e o conectamos ao novo n√≥
 	        struct no *temp = lista;
 	        while (temp->prox != NULL) {
 	            temp = temp->prox;
@@ -87,13 +87,13 @@ int main(int argc, char *argv[]) {
 	    printf("\n");
 	}
 	
-	//FunÁ„o para exibir o menu e tratar a escolha do usu·rio
+	//Fun√ß√£o para exibir o menu e tratar a escolha do usu√°rio
 	int exibirMenu() {
 		int opcao;
 		int valor;
 		
 		do{
-			opcao = menu(); //Chama o menu e captura a escolha do usu·rio
+			opcao = menu(); //Chama o menu e captura a escolha do usu√°rio
 			
 			switch(opcao) {
 				case 1:
